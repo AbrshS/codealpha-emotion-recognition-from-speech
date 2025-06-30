@@ -1,0 +1,4 @@
+CREMA-D = https://www.kaggle.com/datasets/ejlok1/cremad 
+ravdess-emotional-speech-audio = https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio 
+Surrey Audio-Visual Expressed Emotion (SAVEE) = https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee 
+Toronto emotional speech set (TESS) = https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess
