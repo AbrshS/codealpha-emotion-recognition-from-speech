@@ -1,95 +1,38 @@
 
 
----
+# Emotion Recognition from Speech
 
-## 🎤 Emotion Recognition from Speech
+This repository implements an emotion recognition system using speech data and deep learning. It provides a Jupyter notebook for data preprocessing, feature extraction, model training, evaluation, and inference, along with a pre-trained model for immediate use.
 
-A deep learning model that classifies human emotions (e.g., happy, sad, angry, fear, etc.) from speech audio using Convolutional Neural Networks (CNN).
+## Project Structure
 
----
+- **emotion-recognition-from-speech.ipynb**  
+  Main notebook for data analysis, feature engineering, model training, and evaluation.
 
-### 📂 Dataset
+- **models/**  
+  Contains the best trained model for emotion recognition.
 
-This project uses **multiple open datasets**:
+- **Data/**  
+  Directory for datasets and related resources.
 
-* RAVDESS
-* CREMA-D
-* TESS
-* SAVEE
+## Getting Started
 
-Each file is labeled with an emotion class such as:
-`neutral`, `happy`, `sad`, `angry`, `fear`, `disgust`, `surprise`, `calm`.
+1. Clone the repository.
+2. Open `emotion-recognition-from-speech.ipynb` in Jupyter Notebook or JupyterLab.
+3. Follow the notebook to preprocess data, train the model, or use the pre-trained model for inference.
 
----
+## Requirements
 
-### 🧠 Model
+- Python
+- Jupyter Notebook
+- TensorFlow or Keras
+- librosa
+- pandas, numpy, matplotlib, seaborn
 
-* **Input**: Extracted MFCC features from audio
-* **Architecture**: 1D CNN with Conv → Pool → Dropout layers
-* **Output**: Softmax layer with 8 emotion classes
+(Install dependencies using `pip install -r requirements.txt` if available.)
 
----
+## License
 
-### 🚀 How to Run
-
-1. **Install requirements**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Train the model**
-
-   ```python
-   python train_emotion_model.py
-   ```
-
-   > Includes callbacks to save the best model to `emotion_recognition_speech_model.h5`.
-
-3. **Test the model**
-
-   ```python
-   python test_model.py
-   ```
-
-   This will:
-
-   * Load `emotion_recognition_speech_model.h5`
-   * Predict on test set
-   * Print classification report
-   * Show confusion matrix with predicted vs actual labels
-
----
-
-### 🎧 Test with Custom Audio (optional)
-
-Record your own `.wav` file and test it like this:
-
-```python
-data, sr = librosa.load("your_voice.wav")
-features = extract_features(data, sr)
-prediction = model.predict(features)
-```
----
-
-### 📁 Folder Structure
-
-```
-├── data/                 # Dataset folders (RAVDESS, CREMA, etc.)
-├── model/                # Saved model .h5
-├── train_emotion_model.py
-├── test_model.py
-├── utils.py              # Feature extraction, plotting
-├── requirements.txt
-└── README.md
-```
-
----
-
-### ✅ Future Improvements
-
-* Real-time voice input using microphone
-* Add more robust emotion classes
-* Deploy with a web interface (e.g., Streamlit)
+This project is for educational and research purposes.
 
 ---
