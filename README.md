@@ -70,16 +70,6 @@ data, sr = librosa.load("your_voice.wav")
 features = extract_features(data, sr)
 prediction = model.predict(features)
 ```
-
----
-
-### 📈 Sample Results
-
-| Metric   | Score                    |
-| -------- | ------------------------ |
-| Accuracy | 87%+                     |
-| F1-Score | High on majority classes |
-
 ---
 
 ### 📁 Folder Structure
